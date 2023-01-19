@@ -1,0 +1,59 @@
+.banner{
+  background-image: url('../../../assets/img/bannerLogo.jpg');
+  height: 750px;
+  background-position: center ;
+  background-size: cover;
+}
+
+.banner2{
+  background-image: url('../../../assets/img/bannerLogo2.jpg');
+  height: 750px;
+  background-position: center ;
+  background-size: cover;
+}
+
+.banner3{
+  background-image: url('../../../assets/img/bannerLogo3.jpg');
+  height: 750px;
+  background-position: center ;
+  background-size: cover;
+}
+
+.banner h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  top: 20%;
+  position: relative;
+  margin-left: 10%;
+}
+
+.banner2 h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 2%;
+  top: 20%;
+  position: relative;
+  line-height: 1;
+}
+
+.banner3 h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 20%;
+  line-height: 1;
+}
+
+.step h1{
+  color: green;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-top: 1%;
+}
