@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card'
 
 
 
@@ -43,6 +45,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,11 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatMenuModule,
     MatIconModule,
     MatBadgeModule,
+    MatSidenavModule,
+    MatCardModule
+
+
+
 
 
   ],

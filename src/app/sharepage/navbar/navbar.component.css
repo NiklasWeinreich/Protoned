@@ -10,3 +10,20 @@
   color: var(--primary-color);
 }
 
+.btnImg {
+  border-style: none;
+  background-color: transparent;
+}
+
+.SumOfMoney{
+  font-size: 11px;
+}
+
+.SumOfMoney:hover{
+  cursor:no;
+}
+
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+  top: -1%;
+  left: 60%;
+}

@@ -1,7 +1,23 @@
-.shoppingCart{
-  border: none;
-  outline: none;
-  background-color: transparent;
+.navbar-light{
+  height: fit-content;
 }
 
+.btnImg {
+  border-style: none;
+  background-color: transparent;
+  outline: none;
+}
 
+.SumOfMoney{
+  font-size: 11px;
+
+}
+
+.SumOfMoney:hover{
+  cursor:no;
+}
+
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+  left: 60%;
+
+}

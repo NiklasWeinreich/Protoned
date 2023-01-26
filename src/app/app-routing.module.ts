@@ -10,6 +10,7 @@ import { UpcommingComponent } from './pages/upcomming/upcomming.component';
 import { MerchandiseComponent } from './pages/merchandise/merchandise.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'merchandise', component: MerchandiseComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
+  {path: 'shop', component: ShoppingCartComponent}
 
 ];
 
