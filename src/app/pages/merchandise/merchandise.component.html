@@ -1,8 +1,21 @@
 <!--Basket TEST-->
 <form class="d-flex justify-content-around border-bottom mt-3">
-    TEST
+    <div class="dropdown">
+      <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="bi bi-filter-square-fill"></i>
+          Filter
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </button>
+    </div>
   <form class="d-flex justify-content-around">
-    TEST
+    <div class="container">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+    </div>
   </form>
   <form class="d-flex justify-content-around ">
     <button [routerLink]="['/shop']" routerLinkActive="router-link-active" class="btnImg ">
@@ -11,9 +24,7 @@
       <p class="SumOfMoney fw-medium">{{ '26050' | currency:'DKK ' }}</p>
     </button>
   </form>
-
 </form>
-
 
 
 
