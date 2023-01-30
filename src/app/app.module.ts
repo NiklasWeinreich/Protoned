@@ -22,9 +22,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card'
-
-
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -41,6 +39,7 @@ import {MatCardModule} from '@angular/material/card'
     EventsComponent,
     MusicComponent,
     ShoppingCartComponent,
+
 
 
 
