@@ -11,12 +11,10 @@ export class MerchandiseComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-
   }
 
   onSortUpdated(newSort: string): void {
     this.sort = newSort;
-
   }
 
 }

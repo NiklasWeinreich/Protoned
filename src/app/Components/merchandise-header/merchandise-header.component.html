@@ -1,0 +1,31 @@
+<!--Filter TEST-->
+<form class="d-flex justify-content-around border-bottom mt-3">
+  <div class="dropdown">
+    <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="bi bi-filter-square-fill"></i>
+        Sort by {{sort}}
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="onSortUpdated('Higest Price')">Higest Price</a>
+        <a class="dropdown-item" (click)="onSortUpdated('Lowest Price')">Lowest Price</a>
+        <a class="dropdown-item" (click)="onSortUpdated('Most Popular')">Most Popular</a>
+      </div>
+    </button>
+  </div>
+  <!--Search Test-->
+<form class="d-flex justify-content-around">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <i class="bi bi-search mt-1" style="font-size: 1rem;"></i>
+    </form>
+  </div>
+</form>
+<!--Basket Test-->
+<form class="d-flex justify-content-around ">
+  <button [routerLink]="['/shop']" routerLinkActive="router-link-active" class="btnImg ">
+    <div [matBadge]="1" matBadgeOverlap="true" matBadgeColor="warn" class="bagde"></div>
+    <i class="bi bi-basket  me-3" style="font-size: 1.5rem;"></i>
+    <p class="SumOfMoney fw-medium">{{ '26050' | currency:'DKK ' }}</p>
+  </button>
+</form>
+</form>
