@@ -25,6 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import { ProductBoxComponent } from './Components/product-box/product-box.component';
 import { MerchandiseHeaderComponent } from './Components/merchandise-header/merchandise-header.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -44,11 +45,6 @@ import { MerchandiseHeaderComponent } from './Components/merchandise-header/merc
     ProductBoxComponent,
     MerchandiseHeaderComponent,
 
-
-
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -58,11 +54,8 @@ import { MerchandiseHeaderComponent } from './Components/merchandise-header/merc
     MatIconModule,
     MatBadgeModule,
     MatSidenavModule,
-    MatCardModule
-
-
-
-
+    MatCardModule,
+    MatGridListModule,
 
   ],
   providers: [],

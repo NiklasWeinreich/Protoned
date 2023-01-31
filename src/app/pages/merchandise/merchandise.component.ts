@@ -6,15 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./merchandise.component.css']
 })
 export class MerchandiseComponent implements OnInit {
-  sort = 'filtering';
 
   constructor() {}
 
   ngOnInit(): void {
-  }
-
-  onSortUpdated(newSort: string): void {
-    this.sort = newSort;
   }
 
 }
