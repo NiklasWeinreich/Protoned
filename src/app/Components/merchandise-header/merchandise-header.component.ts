@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-merchandise-header',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MerchandiseHeaderComponent implements OnInit {
   sort = 'filtering';
+  itemShowCount = 12;
+
+  
 
   constructor() { }
 
@@ -17,4 +21,9 @@ export class MerchandiseHeaderComponent implements OnInit {
     this.sort = newSort;
   }
 
+  onItemsUpdated(count: number): void {
+    this.itemShowCount = count;
+  }
+
+  
 }

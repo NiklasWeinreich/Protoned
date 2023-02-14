@@ -26,6 +26,8 @@ import {MatCardModule} from '@angular/material/card';
 import { ProductBoxComponent } from './Components/product-box/product-box.component';
 import { MerchandiseHeaderComponent } from './Components/merchandise-header/merchandise-header.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSidenavModule,
     MatCardModule,
     MatGridListModule,
+    MatTableModule
+
 
   ],
   providers: [],

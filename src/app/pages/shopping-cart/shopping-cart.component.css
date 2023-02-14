@@ -1,0 +1,11 @@
+button{
+  border-style: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+img{
+  width: 20%;
+  height: 20%;
+}

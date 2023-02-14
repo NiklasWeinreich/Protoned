@@ -1,23 +1,58 @@
 <!--Filter TEST-->
-<form class="d-flex justify-content-around border-bottom mt-3">
-  <div class="dropdown">
-    <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton"
-      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <i class="bi bi-filter-square-fill"></i>
-      Sort by {{sort}}
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" (click)="onSortUpdated('Higest Price')">Higest Price</a>
-        <a class="dropdown-item" (click)="onSortUpdated('Lowest Price')">Lowest Price</a>
-        <a class="dropdown-item" (click)="onSortUpdated('Most Popular')">Most Popular</a>
+<form class="d-flex justify-content-around border-bottom mt-3 ">
+
+
+  <mat-card class="d-flex justify-content-between mb-3 "> <!--Lav om til Bootstrap Card-->
+    <div class="dropdown">
+      <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="bi bi-filter-square-fill"></i>
+        Sort by {{sort}}
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="onSortUpdated('Higest Price')">Higest Price</a>
+          <a class="dropdown-item" (click)="onSortUpdated('Lowest Price')">Lowest Price</a>
+          <a class="dropdown-item" (click)="onSortUpdated('Most Popular')">Most Popular</a>
+        </div>
+      </button>
+    </div>
+    <!--Filter Items-->
+    <div class="d-flex justify-content-between ml-5 mr-5">
+      <div class="dropdown">
+        <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Show {{itemShowCount}}
+        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="onItemsUpdated(12)">12</a>
+          <a class="dropdown-item" (click)="onItemsUpdated(24)">24</a>
+          <a class="dropdown-item" (click)="onItemsUpdated(32)">32</a>
+        </div>
+      </button>
       </div>
-    </button>
-  </div>
+    </div>
+
+    <!-- Grid buttons sort-->
+    <div class="d-flex justify-content-between mt-2 ">
+      <button>
+        <mat-icon>view_list</mat-icon>
+      </button>
+      <button>
+        <mat-icon>view_module</mat-icon>
+      </button>
+      <button>
+        <mat-icon>view_comfy</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+
+
+
   <!--Search Test-->
-  <form class="d-flex justify-content-around">
+  <form class="d-flex justify-content-around mt-3 mr-5">
     <div class="container-fluid">
       <form class="d-flex" role="search">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+          <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+            aria-describedby="basic-addon2">
           <div class="input-group-append">
             <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
           </div>
@@ -27,12 +62,13 @@
   </form>
   <!--Basket Test-->
   <form class="d-flex justify-content-sticky ">
-    <button [routerLink]="['/shop']" routerLinkActive="router-link-active" class="btnImg ">
+    <button [routerLink]="['/cart']" routerLinkActive="router-link-active" class="btnImg ">
       <div [matBadge]="1" matBadgeOverlap="true" matBadgeColor="warn" class="bagde"></div>
       <i class="bi bi-basket  me-3" style="font-size: 1.5rem;"></i>
       <p class="SumOfMoney fw-medium">{{ '26050' | currency:'DKK ' }}</p>
     </button>
   </form>
 </form>
+
 
 

@@ -31,3 +31,9 @@
   outline: none;
 }
 
+button{
+  border-style: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
