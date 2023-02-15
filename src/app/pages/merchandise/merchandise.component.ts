@@ -12,4 +12,7 @@ export class MerchandiseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAddToCart(): void {
+
+  }
 }

@@ -28,6 +28,11 @@ import {MerchandiseHeaderComponent } from './Components/merchandise-header/merch
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CartService } from './services/cart.service';
+
+// Services
+
 
 
 
@@ -60,11 +65,12 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatGridListModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
 
 
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
