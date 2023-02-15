@@ -9,11 +9,25 @@ import { Cart, CartItem } from 'src/app/Models/cart.model';
 })
 export class ShoppingCartComponent {
   cart: Cart = { items: [{
-    product: '../../../assets/img/test.jpg',
+    product: 'https://via.placeholder.com/150',
     name: 'Product name',
-    price: 230,
-    quantity: 1,
+    price: 495,
+    quantity: 7,
     id: 1,
+  },
+  {
+    product: 'https://via.placeholder.com/150',
+    name: 'Product name',
+    price: 295.95,
+    quantity: 5,
+    id: 2,
+  },
+  {
+    product: 'https://via.placeholder.com/150',
+    name: 'Product name',
+    price: 695,
+    quantity: 3,
+    id: 3,
 
   }]};
 

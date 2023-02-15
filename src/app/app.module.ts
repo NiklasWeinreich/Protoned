@@ -23,10 +23,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
-import { ProductBoxComponent } from './Components/product-box/product-box.component';
-import { MerchandiseHeaderComponent } from './Components/merchandise-header/merchandise-header.component';
+import {ProductBoxComponent } from './Components/product-box/product-box.component';
+import {MerchandiseHeaderComponent } from './Components/merchandise-header/merchandise-header.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -58,7 +59,8 @@ import {MatTableModule} from '@angular/material/table';
     MatSidenavModule,
     MatCardModule,
     MatGridListModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule
 
 
   ],

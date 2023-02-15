@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { CartItem, Cart } from 'src/app/Models/cart.model';
+
 
 @Component({
   selector: 'app-merchandise-header',
@@ -9,8 +10,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 export class MerchandiseHeaderComponent implements OnInit {
   sort = 'filtering';
   itemShowCount = 12;
-
-  
 
   constructor() { }
 
@@ -25,5 +24,9 @@ export class MerchandiseHeaderComponent implements OnInit {
     this.itemShowCount = count;
   }
 
-  
+  getTotal(items: Array<CartItem>): number {
+    return items.
+    map((item) => item.price * item.quantity)
+    .reduce((prev, current) => prev + current, 0)
+  }
 }
