@@ -62,11 +62,11 @@
   </form>
   <!--Basket Test-->
   <form class="d-flex justify-content-sticky ">
-    <button [routerLink]="['/cart']" routerLinkActive="router-link-active" class="btnImg ">
-      <div [matBadge]="1" matBadgeOverlap="true" matBadgeColor="warn" class="bagde"></div>
-      <i class="bi bi-basket  me-3" style="font-size: 1.5rem;"></i>
-      <p class="SumOfMoney fw-medium">{{ '26050' | currency:'DKK ' }}</p>
-    </button>
+      <button  [routerLink]="['/cart']" routerLinkActive="router-link-active" class="btnImg ">
+        <div [matBadge]="itemsQuantity" [matBadgeHidden]="!itemsQuantity" matBadgeOverlap="true" matBadgeColor="warn" class="bagde"></div>
+        <i class="bi bi-basket  me-3" style="font-size: 1.5rem;"></i>
+        <p class="SumOfMoney fw-medium">{{ getTotal(cart.items) | currency:'DKK ' }}</p>
+      </button>
   </form>
 </form>
 

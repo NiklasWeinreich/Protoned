@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Cart, CartItem } from 'src/app/Models/cart.model';
+import { CartService } from 'src/app/services/cart.service';
+
 
 
 @Component({
@@ -41,17 +43,20 @@ export class ShoppingCartComponent {
     'action',
 
   ]
-  constructor() {}
+  constructor(private cartService: CartService) {}
 
    ngOnInit(){
     this.dataSource = this.cart.items;
+    this.cartService.cart.subscribe((_cart: Cart)=> {
+      this.cart = _cart;
+      this.dataSource = this.cart.items;
+    })
   }
 
    // Shopping cart + - product
   getTotal(items: Array<CartItem>): number {
-    return items.
-    map((item) => item.price * item.quantity)
-    .reduce((prev, current) => prev + current, 0)
+    return this,this.cartService.getTotal(items);
   }
+
 
 }
