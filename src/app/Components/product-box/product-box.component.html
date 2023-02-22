@@ -1,5 +1,4 @@
-<div *ngIf="product" class="container mt-4 mb-4" style="background-color: brown;">
-  <div class="row">
+<div *ngIf="product" class="container mt-5 mb-5 mx-5" >
     <div class="col-4">
       <div class="card" style="width: 15rem;">
         <img [src]="product.image" class="card-img-top img-thumbnail">
@@ -8,14 +7,13 @@
             <h5 class="card-title">{{product.title}}</h5>
             <span class="">{{product.description}}</span>
           </div>
-          <div class="justify-content-around">
+          <div class="d-flex justify-content-between mt-2">
             <span class="text-success">{{ product.price | currency:'DKK ' }}</span>
-            <button (click)="onAddToCart()" class="bg-white mb-2">
+            <button (click)="onAddToCart()" class="bg-white">
               <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
             </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </div>

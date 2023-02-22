@@ -13,8 +13,8 @@ export class MerchandiseComponent implements OnInit, OnDestroy {
   products: Array<Product> | undefined;
   sort = 'desc';
 
-  //12 objects
-  count = '2';
+  // objects
+  count = '30';
   productsSubcription: Subscription | undefined;
 
   constructor(private CartService: CartService, private storeService: StoreService) {}

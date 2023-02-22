@@ -1,13 +1,14 @@
 <app-merchandise-header></app-merchandise-header>
-
-
-
-
-<div *ngFor="let product of products">
-  <div class="">
-    <app-product-box
-    [product]="product"
-    (addToCart)="onAddToCart($event)">
-    </app-product-box>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-deck">
+        <div *ngFor="let product of products">
+          <app-product-box [product]="product" (addToCart)="onAddToCart($event)">
+          </app-product-box>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
