@@ -1,14 +1,21 @@
-<!--Product-->
-<div class="card mt-5 m-lg-5 mb-5" style="width: 15rem;">
-  <img src="https://via.placeholder.com/150" class="card-img-top img-thumbnail" alt="...">
-  <div class="card-body">
-    <h5 class="text-center">Product Name</h5>
-    <p class="fs-4 text-center">Description</p>
-  </div>
-  <div class="d-flex justify-content-around">
-    <span class="text-success">{{ '230' | currency:'DKK ' }}</span>
-    <button (click)="onAddToCart()" class="bg-white mb-2">
-      <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
-    </button>
+<div *ngIf="product" class="container mt-4 mb-4" style="background-color: brown;">
+  <div class="row">
+    <div class="col-4">
+      <div class="card" style="width: 15rem;">
+        <img [src]="product.image" class="card-img-top img-thumbnail">
+        <div class="card-body text-center">
+          <div class="text-truncate">
+            <h5 class="card-title">{{product.title}}</h5>
+            <span class="">{{product.description}}</span>
+          </div>
+          <div class="justify-content-around">
+            <span class="text-success">{{ product.price | currency:'DKK ' }}</span>
+            <button (click)="onAddToCart()" class="bg-white mb-2">
+              <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

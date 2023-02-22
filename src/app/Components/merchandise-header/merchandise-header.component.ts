@@ -2,18 +2,16 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CartItem, Cart } from 'src/app/Models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
-
-
 @Component({
   selector: 'app-merchandise-header',
   templateUrl: './merchandise-header.component.html',
+  template: `<app-merchandise-header [cart]="cart">` ,
   styleUrls: ['./merchandise-header.component.css']
 })
 export class MerchandiseHeaderComponent implements OnInit {
   sort = 'filtering';
   itemShowCount = 12;
 
-  //Shopping cart
   private _cart: Cart = { items: []};
   itemsQuantity = 0;
 
@@ -34,11 +32,13 @@ export class MerchandiseHeaderComponent implements OnInit {
   getTotal(items: Array<CartItem>): number {
     return this.cartService.getTotal(items);
   }
-  //Shopping Cart end
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cartService.cart.subscribe((_cart) =>{
+      this.cart = _cart;
+    })
   }
 
   onSortUpdated(newSort: string): void {

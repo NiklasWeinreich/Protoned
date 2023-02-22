@@ -1,7 +1,12 @@
 <app-merchandise-header></app-merchandise-header>
-<div class="container-fluid text-center">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ml-5">
+
+
+
+
+<div *ngFor="let product of products">
+  <div class="">
     <app-product-box
+    [product]="product"
     (addToCart)="onAddToCart($event)">
     </app-product-box>
   </div>

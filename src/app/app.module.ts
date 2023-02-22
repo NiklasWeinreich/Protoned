@@ -30,6 +30,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { StoreService } from './services/store.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -63,11 +65,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     MatTableModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
 
 
   ],
-  providers: [CartService],
+  providers: [CartService, StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

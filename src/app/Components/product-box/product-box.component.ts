@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import { Product } from 'src/app/Models/product.models';
 
 @Component({
@@ -7,15 +7,9 @@ import { Product } from 'src/app/Models/product.models';
   styleUrls: ['./product-box.component.css']
 })
 export class ProductBoxComponent implements OnInit {
-  product: Product |undefined = {
-    id: 1,
-    title: 'Product name',
-    price: 230,
-    category: 'Clothes',
-    description: 'Description',
-    image: 'https://via.placeholder.com/150',
-  };
-@Output() addToCart = new EventEmitter();
+  @Input() product: Product |undefined;
+
+  @Output() addToCart = new EventEmitter();
 
 
   constructor() { }
