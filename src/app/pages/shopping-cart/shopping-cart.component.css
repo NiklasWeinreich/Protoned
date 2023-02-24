@@ -6,5 +6,11 @@
   outline: none;
 }
 
+.img-fluid{
+  max-width: 20%;
+  height: auto;
+}
 
-
+.img-thumbnail{
+  border-style: none;
+}

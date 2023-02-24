@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreService } from './services/store.service';
 
 //Pages
 import { AppRoutingModule } from './app-routing.module';
@@ -30,8 +32,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { StoreService } from './services/store.service';
-import { HttpClientModule } from '@angular/common/http';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -66,7 +67,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule
 
 
   ],

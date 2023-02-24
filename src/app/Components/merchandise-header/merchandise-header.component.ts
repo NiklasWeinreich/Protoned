@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CartItem, Cart } from 'src/app/Models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -9,8 +9,10 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./merchandise-header.component.css']
 })
 export class MerchandiseHeaderComponent implements OnInit {
+  @Output() columnsCountChange = new EventEmitter<number>();
   sort = 'filtering';
   itemShowCount = 12;
+
 
   private _cart: Cart = { items: []};
   itemsQuantity = 0;

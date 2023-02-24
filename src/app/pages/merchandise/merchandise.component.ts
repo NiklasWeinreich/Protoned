@@ -7,28 +7,31 @@ import { StoreService } from 'src/app/services/store.service';
 @Component({
   selector: 'app-merchandise',
   templateUrl: './merchandise.component.html',
-  styleUrls: ['./merchandise.component.css']
+  styleUrls: ['./merchandise.component.css'],
 })
 export class MerchandiseComponent implements OnInit, OnDestroy {
   products: Array<Product> | undefined;
   sort = 'desc';
 
   // objects
-  count = '30';
+  count = '12';
   productsSubcription: Subscription | undefined;
 
-  constructor(private CartService: CartService, private storeService: StoreService) {}
+  constructor(
+    private CartService: CartService,
+    private storeService: StoreService
+  ) {}
 
   ngOnInit(): void {
     this.getProducts();
   }
 
   getProducts(): void {
-    this.productsSubcription = this.storeService.getAllProducts(this.count, this.sort)
-    .subscribe((_products)=> {
-      this.products = _products;
-    })
-
+    this.productsSubcription = this.storeService
+      .getAllProducts(this.count, this.sort)
+      .subscribe((_products) => {
+        this.products = _products;
+      });
   }
 
   onAddToCart(product: Product): void {
@@ -37,15 +40,14 @@ export class MerchandiseComponent implements OnInit, OnDestroy {
       name: product.title,
       price: product.price,
       quantity: 1,
-      id: product.id
-
+      id: product.id,
     });
-
   }
 
   ngOnDestroy(): void {
-    if(this.productsSubcription) {
+    if (this.productsSubcription) {
       this.productsSubcription.unsubscribe();
     }
   }
+
 }

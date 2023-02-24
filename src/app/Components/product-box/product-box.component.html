@@ -1,6 +1,6 @@
-<div *ngIf="product" class="container mt-5 mb-5 mx-5" >
+<!-- <div *ngIf="product" class="container mt-5 mb-5 mx-5" >
     <div class="col-4">
-      <div class="card" style="width: 15rem;">
+      <div class="card" style="width: 20rem; height: 20rem;">
         <img [src]="product.image" class="card-img-top img-thumbnail">
         <div class="card-body text-center">
           <div class="text-truncate">
@@ -16,4 +16,20 @@
         </div>
       </div>
     </div>
+</div> -->
+
+<div *ngIf="product" class="container py-4">
+  <div class="card" style="width: 19rem;">
+    <img class="card-img-top mt-3" [src]=product.image style="width: 100px; height: 100px; margin: auto; ">
+    <div class="card-body text-center">
+      <h2 class="card-title text-truncate" style="max-width: 300px;">{{product.title}}</h2>
+      <p class="card-text text-truncate">{{product.description}}</p>
+      <div class="d-flex justify-content-between mt-2">
+        <span class="text-success">{{ product.price | currency:'DKK ' }}</span>
+        <button (click)="onAddToCart()" class="bg-white">
+          <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

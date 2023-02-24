@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import { Product } from 'src/app/Models/product.models';
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-product-box',
@@ -7,12 +8,14 @@ import { Product } from 'src/app/Models/product.models';
   styleUrls: ['./product-box.component.css']
 })
 export class ProductBoxComponent implements OnInit {
-  @Input() product: Product |undefined;
+  @Input() product: Product | undefined;
 
   @Output() addToCart = new EventEmitter();
 
 
-  constructor() { }
+  constructor(private storeService: StoreService) {
+
+  }
 
   ngOnInit(): void {
   }
