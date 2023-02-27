@@ -81,14 +81,16 @@ export class ShoppingCartComponent {
   }
 
   onCheckout(): void {
-    this.http.post('http://localhost:4242/checkout', {
-     items: this.cart.items
-    }).subscribe(async (res: any) => {
-      let stripe = await loadStripe('pk_test_51MawfMFFxCTt81aXOvpKeSzT34kMWgpEgfkaCwX3EJqE3nEtp0z9qUDQbgd3yTIKppstc2xGKsV3pXIlb33p92eJ00N01PxT3Q');
-      stripe?.redirectToCheckout({
-        sessionId: res.id
+    this.http
+      .post('http://localhost:4242/checkout', {
+        items: this.cart.items,
       })
-    });
+      .subscribe(async (res: any) => {
+        let stripe = await loadStripe('pk_test_51MawfMFFxCTt81aXOvpKeSzT34kMWgpEgfkaCwX3EJqE3nEtp0z9qUDQbgd3yTIKppstc2xGKsV3pXIlb33p92eJ00N01PxT3Q');
+        stripe?.redirectToCheckout({
+          sessionId: res.id,
+        });
+      });
   }
 
 }
