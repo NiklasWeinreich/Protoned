@@ -1,11 +1,10 @@
 <!--Filter TEST-->
-<form class="d-flex justify-content-around border-bottom mt-3 ">
-
-
-  <mat-card class="d-flex justify-content-between mb-3 "> <!--Lav om til Bootstrap Card-->
+<form class="d-flex justify-content-around border-bottom  p-3 mb-2 bg-white">
+  <!--Test filter items-->
+  <div class="card mb-3 justify-content-between " style="width: 25rem;">
     <div class="dropdown">
-      <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn-dropdown- btn dropdown-toggle  mt-1" style="font-size: 1rem;" type="button"
+        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="bi bi-filter-square-fill"></i>
         Sort by {{sort}}
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -14,59 +13,40 @@
           <a class="dropdown-item" (click)="onSortUpdated('Most Popular')">Most Popular</a>
         </div>
       </button>
-    </div>
-    <!--Filter Items-->
-    <div class="d-flex justify-content-between ml-5 mr-5">
-      <div class="dropdown">
-        <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button" id="dropdownMenuButton"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Show {{itemShowCount}}
-        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" (click)="onItemsUpdated(12)">12</a>
-          <a class="dropdown-item" (click)="onItemsUpdated(24)">24</a>
-          <a class="dropdown-item" (click)="onItemsUpdated(32)">32</a>
+      <div class="dropdown d-flex float-left">
+        <div class="dropdown mt-1">
+          <button class="btn-dropdown btn dropdown-toggle" style="font-size: 1rem;" type="button"
+            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Show {{itemShowCount}}
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" (click)="onItemsUpdated(12)">12</a>
+              <a class="dropdown-item" (click)="onItemsUpdated(24)">24</a>
+              <a class="dropdown-item" (click)="onItemsUpdated(36)">36</a>
+            </div>
+          </button>
         </div>
-      </button>
+      </div>
+      <div class="float-right mt-2 mr-2">
+        <button>
+          <mat-icon>view_module</mat-icon>
+        </button>
+        <button>
+          <mat-icon>view_list</mat-icon>
+        </button>
+        <button>
+          <mat-icon>view_comfy</mat-icon>
+        </button>
       </div>
     </div>
-
-    <!-- Grid buttons sort-->
-    <div class="d-flex justify-content-between mt-2 ">
-      <button>
-        <mat-icon>view_list</mat-icon>
-      </button>
-      <button>
-        <mat-icon>view_module</mat-icon>
-      </button>
-      <button>
-        <mat-icon>view_comfy</mat-icon>
-      </button>
-    </div>
-  </mat-card>
-
-
-
-  <!--Search Test-->
-  <form class="d-flex justify-content-around mt-3 mr-5">
-    <div class="container-fluid">
-      <form class="d-flex" role="search">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-            aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
-          </div>
-        </div>
-      </form>
-    </div>
-  </form>
+  </div>
   <!--Basket Test-->
-  <form class="d-flex justify-content-sticky ">
-      <button  [routerLink]="['/cart']" routerLinkActive="router-link-active" class="btnImg ">
-        <div [matBadge]="itemsQuantity" [matBadgeHidden]="!itemsQuantity" matBadgeOverlap="true" matBadgeColor="warn" class="bagde"></div>
-        <i class="bi bi-basket  me-3" style="font-size: 1.5rem;"></i>
-        <p class="SumOfMoney fw-medium">{{ getTotal(cart.items) | currency:'DKK ' }}</p>
-      </button>
+  <form class="d-flex justify-content-sticky mx-5 mt-2">
+    <button [routerLink]="['/cart']" routerLinkActive="router-link-active" class="btnImg ">
+      <div [matBadge]="itemsQuantity" [matBadgeHidden]="!itemsQuantity" matBadgeOverlap="true" matBadgeColor="warn"
+        class="bagde"></div>
+      <i class="bi bi-basket  me-3" style="font-size: 1.5rem;"></i>
+      <p class="SumOfMoney fw-medium">{{ getTotal(cart.items) | currency:'DKK ' }}</p>
+    </button>
   </form>
 </form>
 
