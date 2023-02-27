@@ -15,7 +15,7 @@ app.post("/checkout", async (req, res, next) => {
         const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         shipping_address_collection: {
-        allowed_countries: ['US', 'CA'],
+        allowed_countries: ['DK'],
         },
             shipping_options: [
             {
@@ -25,7 +25,7 @@ app.post("/checkout", async (req, res, next) => {
                     amount: 0,
                     currency: 'dkk',
                 },
-                display_name: 'Free shipping',
+                display_name: 'Gratis forsendelse ',
                 // Delivers between 5-7 business days
                 delivery_estimate: {
                     minimum: {
@@ -46,7 +46,7 @@ app.post("/checkout", async (req, res, next) => {
                     amount: 1500,
                     currency: 'dkk',
                 },
-                display_name: 'Next day air',
+                display_name: 'Levering næste dag',
                 // Delivers in exactly 1 business day
                 delivery_estimate: {
                     minimum: {
