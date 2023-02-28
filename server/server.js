@@ -43,7 +43,7 @@ app.post("/checkout", async (req, res, next) => {
                 shipping_rate_data: {
                 type: 'fixed_amount',
                 fixed_amount: {
-                    amount: 1500,
+                    amount: 7500,
                     currency: 'dkk',
                 },
                 display_name: 'Levering næste dag',
