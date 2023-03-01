@@ -19,22 +19,20 @@ import { MusicComponent } from './pages/music/music.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartService } from './services/cart.service';
-import {ProductBoxComponent } from './Components/product-box/product-box.component';
+import { ProductBoxComponent } from './Components/product-box/product-box.component';
 
 // Angular material
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
-import {MerchandiseHeaderComponent } from './Components/merchandise-header/merchandise-header.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatTableModule} from '@angular/material/table';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MerchandiseHeaderComponent } from './Components/merchandise-header/merchandise-header.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LayoutModule } from '@angular/cdk/layout';
-
-
 
 @NgModule({
   declarations: [
@@ -52,7 +50,6 @@ import { LayoutModule } from '@angular/cdk/layout';
     ShoppingCartComponent,
     ProductBoxComponent,
     MerchandiseHeaderComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -68,11 +65,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatButtonModule,
     MatSnackBarModule,
     HttpClientModule,
-    LayoutModule
-
-
+    LayoutModule,
   ],
   providers: [CartService, StoreService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
