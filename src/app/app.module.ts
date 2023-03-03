@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
+import { ContentfulService } from './services/contentful.service';
 
 //Pages
 import { AppRoutingModule } from './app-routing.module';
@@ -66,8 +67,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSnackBarModule,
     HttpClientModule,
     LayoutModule,
+
+
   ],
-  providers: [CartService, StoreService],
+  providers: [CartService, StoreService,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
