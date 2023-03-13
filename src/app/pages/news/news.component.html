@@ -1,0 +1,12 @@
+<div class="container-fluid d-flex justify-content-between mt-3" *ngFor="let news of multipleNews">
+  <div class="alert alert-info">
+    <div class="p-2">
+      <p>{{news.fields.title}}</p>
+      <p><i>{{news.fields.author}}</i></p>
+      <a><img src="{{news.fields.newsImage.fields.file.url}}" class="img" width="196"></a>
+      <p class="mt-2">{{news.fields.description}}</p>
+      <a href="{{news.fields.url}}">{{news.fields.url}}</a>
+    </div>
+    <a href="{{news.fields.url}}" target="_blank" class="btn btn-primary">Go to Article</a>
+  </div>
+</div>

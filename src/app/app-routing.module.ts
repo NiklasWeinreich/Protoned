@@ -24,7 +24,8 @@ const routes: Routes = [
   {path: 'merchandise', component: MerchandiseComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path: 'cart', component: ShoppingCartComponent}
+  {path: 'cart', component: ShoppingCartComponent},
+  {path: 'news/:id', component: NewsComponent}
 
 ];
 
