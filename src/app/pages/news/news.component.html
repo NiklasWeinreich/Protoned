@@ -2,11 +2,24 @@
   <div class="alert alert-info">
     <div class="p-2">
       <p>{{news.fields.title}}</p>
-      <p><i>{{news.fields.author}}</i></p>
+      <p>{{news.fields.author}}</p>
       <a><img src="{{news.fields.newsImage.fields.file.url}}" class="img" width="196"></a>
       <p class="mt-2">{{news.fields.description}}</p>
       <a href="{{news.fields.url}}">{{news.fields.url}}</a>
     </div>
-    <a href="{{news.fields.url}}" target="_blank" class="btn btn-primary">Go to Article</a>
+    <a href="{{news.fields.url}}" target="_blank" class="btn btn-primary float-right">Go to Article</a>
+  </div>
+</div>
+
+<!--Test News-->
+<div class="container-fluid  d-flex justify-content-between mb-3" *ngFor="let smallNews of getMultiplesmallNews">
+  <div class="alert alert-danger">
+    <div class="p-2">
+      <p>{{smallNews.fields.title}}</p>
+      <p>{{smallNews.fields.author}}</p>
+      <a><img src="{{smallNews.fields.smallNewsImage.fields.file.url}}" class="img" width="196"></a>
+      <p class="mt-2">{{smallNews.fields.description}}</p>
+      <p class="fw-bold">{{smallNews.fields.longDescription}}</p>
+    </div>
   </div>
 </div>

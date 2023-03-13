@@ -23,6 +23,14 @@ export class ContentfulService {
     .then(res => res.items);
   }
 
+  //TEST
+  getMultiplesmallNews(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type: 'smallNews'
+    }, query))
+    .then(res => res.items)
+  }
+
   //Get a specific post
   getNews(newsId: any): Promise<Entry<any>> {
     return this.client.getEntries(Object.assign({
@@ -31,8 +39,13 @@ export class ContentfulService {
     .then(res => res.items[0]);
   }
 
-
-
+  //TEST
+  getsmallNews(testNewsId: any): Promise<Entry<any>> {
+    return this.client.getEntries(Object.assign({
+      content_type: 'smallNews'
+    }, {'sys.id': testNewsId}))
+    .then(res => res.items[0]);
+  }
 
 
 }

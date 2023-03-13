@@ -11,11 +11,17 @@ import { Router } from '@angular/router';
 export class NewsComponent implements OnInit {
   multipleNews: Entry<any>[] = [];
 
+  getMultiplesmallNews: Entry<any>[] = [];
+
   constructor(private router: Router, private contentfulService: ContentfulService ) {}
 
   ngOnInit(): void {
     this.contentfulService.getMultipleNews()
     .then(multipleNews => this.multipleNews = multipleNews)
+
+    //TEST
+    this.contentfulService.getMultiplesmallNews()
+    .then(getMultiplesmallNews => this.getMultiplesmallNews = getMultiplesmallNews)
   }
 
   goToNewsDetailsPage(newsId: any){
