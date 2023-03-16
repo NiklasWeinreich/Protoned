@@ -1,39 +1,48 @@
-<p>signup med personlige oplysninger</p>
-<p>skal gemmes i en database</p>
-<p>Emailen skal bruges til newsletter (Hvis det ønskes)</p>
-<p>((man skal kunne signe ind med facebook))</p>
+<!--background image-->
 
-<div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col"></div>
-        <div class="col-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <form>
-                        <div class="mb-3">
-                            <h4 class="text-dark text-muted">Register</h4>
-                        </div>
-                        <div class="mb-3">
-                          <label for="InputEmail1" class="form-label">Email</label>
-                          <input type="text" class="form-control" name="email">
-                        </div>
-                        <div class="mb-3">
-                          <label for="InputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" name="password">
-                        </div>
-                        <button type="button" class="btn btn-info">Register</button>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a href="/login" style="text-decoration: none;">Already have an account? <span class="text-danger">Login</span></a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="" class="text-dark" style="text-decoration: none;">Forgot Password?</a>
-                            </div>
-                        </div>
-                      </form>
-                </div>
-            </div>
+
+<div class="container d-flex justify-content-center">
+  <div class="jumbotron bg-white mt-4 border border-1 border border-secondary">
+    <h1 class="display-3 text-center text-secondary">Sign up now<hr></h1>
+    <!--rows-->
+    <div class="row">
+      <!--Columns-->
+      <div class="col">
+      <!--First Name-->
+        <div class="mb-3">
+          <label for="inputFirstName" class="form label">First Name</label>
+          <input type="firstName" class="form-control" id="inputFirstNameId" placeholder="First Name">
         </div>
-        <div class="col"></div>
+        <!--Username-->
+        <div class="mb-3">
+          <label for="inputUsername" class="form label">Username</label>
+          <input type="userName" class="form-control" id="inputUsernameId" placeholder="Username">
+        </div>
+        <!--Password-->
+        <div class="mb-3 ">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+      </div>
+      <div class="col">
+      <!--Last Name-->
+        <div class="mb-3">
+          <label for="inputLastName" class="form-label">Last Name</label>
+          <input type="lastName" class="form-control" id="inputLastNameId" placeholder="Last Name">
+        </div>
+        <!--Email-->
+        <div class="mb-3">
+          <label for="inputEmail" class="form label">Email adress</label>
+          <input type="email" class="form-control" id="inputEmailId" placeholder="Email ">
+        </div>
+        <!--Repeat password-->
+        <div class="mb-3">
+          <label for="inputRepeatPassword" class="form-label">Repeat Password</label>
+          <input type="Password" class="form-control" id="inputRepeatPassword" placeholder="Repeat password">
+        </div>
+      </div>
     </div>
+    <!--login button-->
+    <div class="btn btn-success btn-block">Log in</div>
+  </div>
 </div>

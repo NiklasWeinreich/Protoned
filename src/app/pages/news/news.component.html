@@ -1,25 +1,58 @@
-<div class="container-fluid d-flex justify-content-between mt-3" *ngFor="let news of multipleNews">
-  <div class="alert alert-info">
-    <div class="p-2">
-      <p>{{news.fields.title}}</p>
-      <p>{{news.fields.author}}</p>
-      <a><img src="{{news.fields.newsImage.fields.file.url}}" class="img" width="196"></a>
-      <p class="mt-2">{{news.fields.description}}</p>
-      <a href="{{news.fields.url}}">{{news.fields.url}}</a>
+<!--Header-->
+<div class="container ">
+  <div class="jumbotron mt-2">
+    <div class="blog-header display-4 text-center ">News Page</div>
+    <div class="text-justify font-italic mt-1">
+      <div class="lead">
+      </div>
     </div>
-    <a href="{{news.fields.url}}" target="_blank" class="btn btn-primary float-right">Go to Article</a>
+    <hr>
+    <p class="lead-mb-0">
+      <a class="text-dark font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur voluptas reiciendis fugit, reprehenderit harum et ad aut recusandae quae placeat repudiandae asperiores tenetur fuga! Laudantium totam quia eius rem.</a>
+    </p>
+    <p class="lead-mb-0">
+      <a class="text-dark font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur voluptas reiciendis fugit, reprehenderit harum et ad aut recusandae quae placeat repudiandae asperiores tenetur fuga! Laudantium totam quia eius rem.</a>
+    </p>
   </div>
-</div>
 
-<!--Test News-->
-<div class="container-fluid  d-flex justify-content-between mb-3" *ngFor="let smallNews of getMultiplesmallNews">
-  <div class="alert alert-danger">
-    <div class="p-2">
-      <p>{{smallNews.fields.title}}</p>
-      <p>{{smallNews.fields.author}}</p>
-      <a><img src="{{smallNews.fields.smallNewsImage.fields.file.url}}" class="img" width="196"></a>
-      <p class="mt-2">{{smallNews.fields.description}}</p>
-      <p class="fw-bold">{{smallNews.fields.longDescription}}</p>
+  <!--News-->
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-between">
+      <div class="card mb-3" style="max-width: 540px;" *ngFor="let news of multipleNews">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class=" d-none d-lg-block">
+              <a><img src="{{news.fields.newsImage.fields.file.url}}" class="img-fluid" width="196"></a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">{{news.fields.title}}</h5>
+              <p class="card-text">{{news.fields.description}}</p>
+              <a href="{{news.fields.url}}" target="_blank" class="btn btn-secondary btn-sm float-right">Go to Article</a>
+              <p class="card-text"><small class="text-muted">{{news.fields.author}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--smallNews-->
+      <div class="card mb-3" style="max-width: 540px;" *ngFor="let smallNews of getMultiplesmallNews">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class=" d-none d-lg-block">
+              <a><img src="{{smallNews.fields.smallNewsImage.fields.file.url}}" class="img-fluid" width="196"></a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">{{smallNews.fields.title}}</h5>
+              <p class="card-text">{{smallNews.fields.description}}</p>
+              <a href="{{smallNews.fields.url}}" target="_blank" class="btn btn-secondary btn-sm float-right">Go to Article</a>
+              <p class="card-text"><small class="text-muted">{{smallNews.fields.author}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
