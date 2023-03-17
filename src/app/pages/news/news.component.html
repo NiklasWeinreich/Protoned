@@ -1,18 +1,21 @@
 <!--Header-->
 <div class="container ">
   <div class="jumbotron mt-2">
-    <div class="blog-header display-4 text-center ">News Page</div>
+    <div class="blog-header display-4 text-center" >News Page</div>
     <div class="text-justify font-italic mt-1">
       <div class="lead">
       </div>
     </div>
     <hr>
+    <div *ngFor="let headerNews of MultipleheaderNews">
+    <!--contentful header-->
     <p class="lead-mb-0">
-      <a class="text-dark font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur voluptas reiciendis fugit, reprehenderit harum et ad aut recusandae quae placeat repudiandae asperiores tenetur fuga! Laudantium totam quia eius rem.</a>
+      <a class="text-dark font-weight-bold">{{headerNews.fields.headline1}}</a>
     </p>
     <p class="lead-mb-0">
-      <a class="text-dark font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur voluptas reiciendis fugit, reprehenderit harum et ad aut recusandae quae placeat repudiandae asperiores tenetur fuga! Laudantium totam quia eius rem.</a>
+      <a class="text-dark font-weight-bold">{{headerNews.fields.headline2}}</a>
     </p>
+  </div>
   </div>
 
   <!--News-->
@@ -29,7 +32,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold">{{news.fields.title}}</h5>
               <p class="card-text">{{news.fields.description}}</p>
-              <a href="{{news.fields.url}}" target="_blank" class="btn btn-secondary btn-sm float-right">Go to Article</a>
+              <a href="{{news.fields.url}}" target="_blank" class="btn btn-success btn-sm float-right">Go to Article</a>
               <p class="card-text"><small class="text-muted">{{news.fields.author}}</small></p>
             </div>
           </div>
@@ -47,7 +50,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold">{{smallNews.fields.title}}</h5>
               <p class="card-text">{{smallNews.fields.description}}</p>
-              <a href="{{smallNews.fields.url}}" target="_blank" class="btn btn-secondary btn-sm float-right">Go to Article</a>
+              <a href="{{smallNews.fields.url}}" target="_blank" class="btn btn-success btn-sm float-right">Go to Article</a>
               <p class="card-text"><small class="text-muted">{{smallNews.fields.author}}</small></p>
             </div>
           </div>

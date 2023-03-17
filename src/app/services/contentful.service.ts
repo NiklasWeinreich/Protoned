@@ -23,7 +23,15 @@ export class ContentfulService {
     .then(res => res.items);
   }
 
-  //TEST
+    //Get a specific post
+    getNews(newsId: any): Promise<Entry<any>> {
+      return this.client.getEntries(Object.assign({
+        content_type: 'news'
+      }, {'sys.id': newsId}))
+      .then(res => res.items[0]);
+    }
+
+  //multiple SmallNews
   getMultiplesmallNews(query?: object): Promise<Entry<any>[]> {
     return this.client.getEntries(Object.assign({
       content_type: 'smallNews'
@@ -31,15 +39,7 @@ export class ContentfulService {
     .then(res => res.items)
   }
 
-  //Get a specific post
-  getNews(newsId: any): Promise<Entry<any>> {
-    return this.client.getEntries(Object.assign({
-      content_type: 'news'
-    }, {'sys.id': newsId}))
-    .then(res => res.items[0]);
-  }
-
-  //TEST
+  //SmallNews
   getsmallNews(testNewsId: any): Promise<Entry<any>> {
     return this.client.getEntries(Object.assign({
       content_type: 'smallNews'
@@ -47,5 +47,20 @@ export class ContentfulService {
     .then(res => res.items[0]);
   }
 
+  //Get header news
+  getheaderNews(headerNewsId: any): Promise<Entry<any>> {
+    return this.client.getEntries(Object.assign({
+    content_type: 'headerNews'
+    }, {'sys.id': headerNewsId}))
+    .then(res => res.items[0]);
+    }
+
+      //multiple SmallNews
+  getMultipleheaderNews(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+    content_type: 'headerNews'
+    }, query))
+    .then(res => res.items)
+  }
 
 }
