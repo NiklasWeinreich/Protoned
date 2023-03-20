@@ -9,14 +9,15 @@
     </div>
     <!--Password-->
     <div class="mb-3">
-      <label for="inputPassword" class="form-label">Password</label>
+      <label for="inputPassword"  class="form-label">Password</label>
       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
     </div>
       <!--login button-->
       <div class="btn btn-success btn-block">Log in</div>
     <hr class="mt-3">
     <div class="text-center">
-      <p>Not a member? <a href='#'>Signup here!</a></p>
+      <p>Not a member? <a [routerLink]="['/signup']" routerLinkActive="router-link-active">Signup here!</a></p>
     </div>
     <p class="text-center font-weight-bold display-4">PROTONED</p>
   </div>

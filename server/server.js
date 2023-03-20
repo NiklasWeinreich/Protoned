@@ -22,7 +22,7 @@ app.post("/checkout", async (req, res, next) => {
                 shipping_rate_data: {
                 type: 'fixed_amount',
                 fixed_amount: {
-                    amount: 0,
+                    amount: 5000,
                     currency: 'dkk',
                 },
                 display_name: 'Gratis forsendelse ',
@@ -30,11 +30,11 @@ app.post("/checkout", async (req, res, next) => {
                 delivery_estimate: {
                     minimum: {
                     unit: 'business_day',
-                    value: 5,
+                    value: 1,
                     },
                     maximum: {
                     unit: 'business_day',
-                    value: 7,
+                    value: 5,
                     },
                 }
                 }
