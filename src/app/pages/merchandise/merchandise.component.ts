@@ -14,7 +14,7 @@ export class MerchandiseComponent implements OnInit, OnDestroy {
   sort = 'desc';
 
   // objects
-  count = '12';
+  count = '32';
   productsSubcription: Subscription | undefined;
 
   constructor(
