@@ -5,7 +5,6 @@ import { Cart, CartItem } from 'src/app/Models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
 
-
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
