@@ -1,0 +1,37 @@
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
+  cursor: pointer;
+}
+
+/* Change the opacity when mouse is hovered */
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 100%;
+  accent-color: #339b2a;
+}
+
+.volume_slider {
+  width: 30%;
+  accent-color: #339b2a;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.bi-play-circle-fill,
+i.bi-play-circle-fill,
+i.bi-fast-forward-fill,
+i.bi-skip-backward-fill {
+  cursor: pointer;
+}
