@@ -7,31 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicComponent implements OnInit {
 
-
   ngOnInit(): void {
 
   }
-
-  setVolume(): void {
-
-  }
-
-  seekTo(): void {
-
-  }
-
-  prevTrack(): void {
-
-  }
-
-  nextTrack(): void {
-
-  }
-
-  playpauseTrack(): void {
-
-  }
-
 }
 
 

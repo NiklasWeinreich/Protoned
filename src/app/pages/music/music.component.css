@@ -35,3 +35,9 @@ i.bi-fast-forward-fill,
 i.bi-skip-backward-fill {
   cursor: pointer;
 }
+
+.list-group-item.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
